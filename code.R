@@ -63,6 +63,8 @@ paccum <- function(i,k){
       for(roll in 2:12){
         if((k-roll) > 0 ){
           result <- result + (probDice(roll) * paccum(x - 1, k - roll))
+        }else{
+          next
         }
       }
     }
